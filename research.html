@@ -30,45 +30,110 @@
 
           <ul class="nav">
             <li><a href="index.html">Home</a></li>
-            <li><a href="publications.html">Publications</a></li>
             <li class="active"><a href="research.html">Research</a></li>
-            <li><a href="software.html">Software</a></li>
             <li><a href="bohan_cv.pdf">C.V.</a></li>
           </ul>
 
 
           <div class="nav-collapse">
-          </div><!--/.nav-collapse -->
+          </div>
         </div>
       </div>
     </div>
 
-    <div class="container">
+<div class="container">
 
-<h3>Text Normalisation in Social Media</h3>
+<h3>A Introduction of My PhD Research</h3>
 <div class="well">
 <p>
-This is a place holder.
+My research focuses on <b><a href="https://minerva-access.unimelb.edu.au/bitstream/handle/11343/41029/thesis.pdf?sequence=1">Improving the Utility of Social Media with Natural Language Processing (NLP)</a></b>.
+In particular, I worked on Twitter text normalisation and geolocation prediction. 
+My research aims to practise a <b>divide and conquer</b> paradigm for the huge amount of social media data. 
+On "conquer the noise", lexical normalisation aims to convert non-standard words to their canonical forms in social media, e.g., <i>4eva</i> ("forever"). 
+By doing so, the normalised data is expected to be more accessible to existing NLP tools and downstream application. 
+As for "divide the data", geolocation prediction usually takes a Twitter user's tweets (incl. metadata) as input, and outputs the most probable location from a discrete set of pre-defined locations, such as metropolitan cities. 
+It enables data partition by location.
+As a result, it makes location-based applications feasible (e.g., local event detection, regional sentiment analysis) and avoids dealing with massive irrelevant data.
+</p>
+</div>
+
+<h3>Lexical Normalisation in Social Media</h3>
+<div class="well">
+<p>
+<ul>
+ <li>
+<a href="http://ww2.cs.mu.oz.au/~tim/pubs/sepln2013.pdf">unimelb: Spanish Text Normalisation</a>, Bo Han, Paul Cook and Timothy Baldwin. In Proceedings of Tweet-norm: Tweet Normalization Workshop at SEPLN 2013, 67-71, Madrid, Spain.<br>
+ </li>
+ <li>
+<a href="http://dl.acm.org/citation.cfm?id=2414430&CFID=332163528&CFTOKEN=34685198">Lexical Normalisation of Short Text Messages</a>, Bo Han, Paul Cook and Timothy Baldwin. In ACM Transactions on Intelligent Systems and Technology (TIST) 4(1), pp. 5:1–5:27, 2013.<br>
+ </li>
+ <li>
+<a href="http://aclweb.org/anthology/D/D12/D12-1039.pdf">Automatically Constructing a Normalisation Dictionary for Microblogs</a>, Bo Han, Paul Cook and Timothy Baldwin. In EMNLP-CoNLL 2012, 421–432, Jeju, Republic of Korea.<br>
+[<b><a href="http://ww2.cs.mu.oz.au/~hanb/emnlp.tgz"><font color="gray">Off-the-shelf English normalisation lexicon</font></a></b>] <br>
+ </li>
+ <li>
+<a href="https://www.google.com.au/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&ved=0CDAQFjAA&url=http%3A%2F%2Ftrec.nist.gov%2Fpubs%2Ftrec20%2Fpapers%2FUniMelbLT.microblog.update.pdf&ei=6M6eUYKRO8mHlAX4nYDoBg&usg=AFQjCNGUQtwE893k6NnSV12m19IRDaoSpw&sig2=w5Ymm77tw4FvOzSXAAkr7g&bvm=bv.47008514,d.dGI">Melbourne Language Group Microblog Track Report</a> (Non-referred), Bo Han, Marco Lui and Timothy Baldwin. In TREC 2011, NIST Special Publication: SP 500–295.<br>
+ </li>
+ <li>
+<a href="http://aclweb.org/anthology/P/P11/P11-1038.pdf">Lexical normalisation of short text messages: Makn sens a #twitter</a>, Bo Han, Timothy Baldwin. In ACL 2011, 368–378, Portland, OR, USA.<br>
+[<b><a href="http://people.eng.unimelb.edu.au/tbaldwin/etc/lexnorm_v1.2.tgz"><font color="gray">Normalisation dataset (with corrections from Jacob Eisenstein)</font></a></b>] <br>
+[<b><a href="http://www.csse.unimelb.edu.au/research/lt/resources/lexnorm/"><font color="gray">Normalisation dataset</font></a></b>] <br>
+ </li>
 </p>
 </div>
 
 <h3>Geolocation Prediction in Social Media</h3>
 <div class="well">
 <p>
-This is a placeholder
+<ul>
+ <li>
+<a href="http://jair.org/media/4200/live-4200-7781-jair.pdf">Text-based Twitter User Geolocation Prediction</a>, Bo Han, Paul Cook and Timothy Baldwin. In Journal of Artificial Intelligence Research, Volume 49, pages 451-500. <br>
+[<b><a href="http://ww2.cs.mu.oz.au/~tim/etc/liw-jair.tgz"><font color="gray">Ranked Location Indicative Words using various methods</font></a></b>] <br>
+[<b><a href="http://hum.csse.unimelb.edu.au:5000/"><font color="gray">Query Location Indicative Words by city name</font></a></b>] <br>
+ </li>
+ <li>
+<a href="http://ww2.cs.mu.oz.au/~hanb/acl2013.pdf">A Stacking-based Approach to Twitter User Geolocation Prediction</a>, Bo Han, Paul Cook and Timothy Baldwin. In ACL 2013, Demo Session, pages 7–12, Sofia, Bulgaria. <br>
+[<b><a href="http://hum.csse.unimelb.edu.au:9000/geo.html"><font color="gray">Live demo (only Chrome is supported)</font></a></b>] <br>
+[<b><a href="https://github.com/tq010or/acl2013"><font color="gray">Source code for live demo</font></a></b>] <br>
+ </li>
+ <li>
+<a href="http://aclweb.org/anthology/C/C12/C12-1064.pdf">Geolocation Prediction in Social Media Data by Finding Location Indicative Words</a>, Bo Han, Paul Cook and Timothy Baldwin. In COLING 2012, 1045–1062, Mumbai, India. <br>
+[<b><a href="https://www.dropbox.com/s/w6xnc7scza044lv/geo.tgz"><font color="gray">Data (only IDs are provided) </font></a></b>] <br>
+[<b><a href="http://ww2.cs.mu.oz.au/~hanb/coling2012.html"><font color="gray">Top-20 Location Indicative Words for top-500 cities across the world</font></a></b>] <br>
+ </li>
+</ul>
 </p>
 </div>
 
-<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
-</script>
-<script type="text/javascript">
-_uacct = "UA-2879579-2";
-urchinTracker();
-</script>
+<h3>General Text Mining</h3>
+<div class="well">
+<p>
+<ul>
 
-    </div> <!-- /container -->
 
-    <script src="./bootstrap/js/bootstrap-min.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</p>
+<p>
+
+</p>
+</div>
+
+</div>
 
   </body>
 </html>
