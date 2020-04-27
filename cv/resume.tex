@@ -1,0 +1,297 @@
+\documentclass[letterpaper,12pt]{article}[leftmargin=*]
+
+\usepackage[empty]{fullpage}
+\usepackage{enumitem}
+\usepackage{ifxetex}
+\ifxetex
+  \usepackage{fontspec}
+  \usepackage[xetex]{hyperref}
+\else
+  \usepackage[utf8]{inputenc}
+  \usepackage[T1]{fontenc}
+  \usepackage[pdftex]{hyperref}
+\fi
+\usepackage{fontawesome}
+\usepackage[sfdefault,light]{FiraSans}
+\usepackage{anyfontsize}
+\usepackage{xcolor}
+\usepackage{tabularx}
+
+%-------------------------------------------------- SETTINGS HERE --------------------------------------------------
+% Header settings
+\def \fullname {Bo HAN}
+\def \subtitle {}
+
+\def \linkedinicon {\faLinkedin}
+\def \linkedinlink {https://linkedin.com/in/hanbo/}
+\def \linkedintext {/hanbo}
+
+\def \phoneicon {\faPhone}
+\def \phonetext {+61-425-719-696}
+
+\def \emailicon {\faEnvelope}
+\def \emaillink {mailto:tq010or@gmail.com}
+\def \emailtext {TQ010OR@gmail.com}
+
+\def \githubicon {\faGithub}
+\def \githublink {https://github.com/tq010or}
+\def \githubtext {/TQ010OR}
+
+\def \websiteicon {\faGlobe}
+\def \websitelink {http://tq010or.github.io/}
+\def \websitetext {Website}
+
+\def \headertype {\doublecol} % \singlecol or \doublecol
+
+% Misc settings
+\def \entryspacing {-0pt}
+
+\def \bulletstyle {\faAngleRight}
+
+% Define colours
+\definecolor{primary}{HTML}{000000}
+\definecolor{secondary}{HTML}{0D47A1}
+\definecolor{accent}{HTML}{263238}
+\definecolor{links}{HTML}{1565C0}
+
+%------------------------------------------------------------------------------------------------------------------- 
+
+% Defines to make listing easier
+\def \linkedin {\linkedinicon \hspace{3pt}\href{\linkedinlink}{\linkedintext}}
+\def \phone {\phoneicon \hspace{3pt}{ \phonetext}}
+\def \email {\emailicon \hspace{3pt}\href{\emaillink}{\emailtext}}
+\def \github {\githubicon \hspace{3pt}\href{\githublink}{\githubtext}}
+\def \website {\websiteicon \hspace{3pt}\href{\websitelink}{\websitetext}}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.55in}
+\addtolength{\evensidemargin}{-0.55in}
+\addtolength{\textwidth}{1.1in}
+\addtolength{\topmargin}{-0.6in}
+\addtolength{\textheight}{1.1in}
+
+% Define the link colours
+\hypersetup{
+    colorlinks=true,
+    urlcolor=links,
+}
+
+% Set the margin alignment 
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+%-------------------------
+% Custom commands
+
+% Sections
+\renewcommand{\section}[2]{\vspace{5pt}
+  \colorbox{secondary}{\color{white}\raggedbottom\normalsize\textbf{{#1}{\hspace{7pt}#2}}}
+}
+
+% Entry start and end, for spacing
+\newcommand{\resumeEntryStart}{\begin{itemize}[leftmargin=2.5mm]}
+\newcommand{\resumeEntryEnd}{\end{itemize}\vspace{\entryspacing}}
+
+% Itemized list for the bullet points under an entry, if necessary
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=4.5mm]}
+\newcommand{\resumeItemListEnd}{\end{itemize}}
+
+% Resume item
+\renewcommand{\labelitemii}{\bulletstyle}
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+% Entry with title, subheading, date(s), and location
+\newcommand{\resumeEntryTSDL}[4]{
+  \vspace{-1pt}\item[]
+    \begin{tabularx}{0.97\textwidth}{X@{\hspace{60pt}}r}
+      \textbf{\color{primary}#1} & {\firabook\color{accent}\small#2} \\
+      \textit{\color{accent}\small#3} & \textit{\color{accent}\small#4} \\
+    \end{tabularx}\vspace{-6pt}
+}
+
+% Entry with title and date(s)
+\newcommand{\resumeEntryTD}[2]{
+  \vspace{-1pt}\item[]
+    \begin{tabularx}{0.97\textwidth}{X@{\hspace{60pt}}r}
+      \textbf{\color{primary}#1} & {\firabook\color{accent}\small#2} \\
+    \end{tabularx}\vspace{-6pt}
+}
+
+% Entry for special (skills)
+\newcommand{\resumeEntryS}[2]{
+  \item[]\small{
+    \textbf{\color{primary}#1 }{ #2 \vspace{-6pt}}
+  }
+}
+
+% Double column header
+\newcommand{\doublecol}[6]{
+  \begin{tabularx}{\textwidth}{Xr}
+    {
+      \begin{tabular}[c]{l}
+        \fontsize{35}{45}\selectfont{\color{primary}{{\textbf{\fullname}}}} \\
+        {\textit{\subtitle}} % You could add a subtitle here
+      \end{tabular}
+    } & {
+      \begin{tabular}[c]{l@{\hspace{1.5em}}l}
+        {\small#4} & {\small#1} \\
+        {\small#5} & {\small#2} \\
+        {\small#6} & {\small#3}
+      \end{tabular}
+    }
+  \end{tabularx}
+}
+
+% Single column header
+\newcommand{\singlecol}[6]{
+  \begin{tabularx}{\textwidth}{Xr}
+    {
+      \begin{tabular}[b]{l}
+        \fontsize{35}{45}\selectfont{\color{primary}{{\textbf{\fullname}}}} \\
+        {\textit{\subtitle}} % You could add a subtitle here
+      \end{tabular}
+    } & {
+      \begin{tabular}[c]{l}
+        {\small#1} \\
+        {\small#2} \\
+        {\small#3} \\
+        {\small#4} \\
+        {\small#5} \\
+        {\small#6}
+      \end{tabular}
+    }
+  \end{tabularx}
+}
+
+\begin{document}
+%-------------------------------------------------- BEGIN HERE --------------------------------------------------
+
+%---------------------------------------------------- HEADER ----------------------------------------------------
+
+\headertype{\linkedin}{\github}{\website}{\phone}{\email}{} % Set the order of items here
+\vspace{-10pt} % Set a negative value to push the body up, and the opposite
+
+%-------------------------------------------------- Statement --------------------------------------------------
+\section{\faFlask}{Personal Statement}
+
+    \resumeItemListStart
+      \resumeItem {I am a problem solver with research and project experience in media, telco, health and financial services. My computational mindset, prototyping skills and product experience enable me to identify data-driven business opportunities and deliver impact-oriented solutions in both start-up and enterprise environments.}
+    \resumeItemListEnd
+
+%-------------------------------------------------- EDUCATION --------------------------------------------------
+\section{\faGraduationCap}{Education}
+
+  \resumeEntryStart
+    \resumeEntryTSDL
+      {Melbourne University}{2010 -- 2014}
+      {PhD in Computer Science (Natural Language Processing)}{Melbourne, Australia}
+    \resumeEntryTSDL
+      {Dalian University of Technology}{2003 -- 2009}
+      {Bachelor and Master in Software Engineering}{Dalian, China}
+  \resumeEntryEnd
+
+%-------------------------------------------------- EXPERIENCE --------------------------------------------------
+\section{\faPieChart}{Experience}
+
+  \resumeEntryStart
+    \resumeEntryTSDL
+      {Accenture}{Sep 2018 -- Present}
+      {Data Engineering Manager}{Sydney, Australia}
+    \resumeItemListStart
+      \resumeItem {I provided for tech architecture design, cloud integrations and solution price estimations.}
+      \resumeItem {I led a diverse team for 5G management system design and implementation for a major telco company.}
+    \resumeItemListEnd
+  \resumeEntryEnd
+
+  \resumeEntryStart
+    \resumeEntryTSDL
+      {Kaplan}{May 2017 -- Aug 2018}
+      {NLP Specialist}{Sydney, Australia}
+    \resumeItemListStart
+      \resumeItem {I optimised a text-based compliance system with more than 100x speed up. I also introduced a cloud-based serverless design which significantly boosted the system throughput and scalability.}
+      \resumeItem {I applied active learning and other pragmatic methods to improve machine learning data quality.}
+      \resumeItem {I co-developed an in-house data anonymisation system for personal and identifiable information.}
+    \resumeItemListEnd
+  \resumeEntryEnd
+
+  \resumeEntryStart
+    \resumeEntryTSDL
+      {Hugo AI}{Mar 2016 -- Mar 2017}
+      {Data Scientist}{Sydney, Australia}
+    \resumeItemListStart
+        \resumeItem {I led the design and development for an automatic user profile summarisation system. The work features data crawling, cleaning, reconciliation and natural language generation from various social media sources. The deliverables facilitate online recruiters for more effective and efficient talent acquisitions.}
+    \resumeItemListEnd
+  \resumeEntryEnd
+
+  \resumeEntryStart
+    \resumeEntryTSDL
+      {IBM Research}{Apr 2014 -- Mar 2016}
+      {Research Scientist}{Melbourne, Australia}
+    \resumeItemListStart
+      \resumeItem {I designed and developed a number of social media analytics, including a text-based \href{http://researcher.watson.ibm.com/researcher/view_group.php?id=6349}{geotagger}, \href{http://researcher.watson.ibm.com/researcher/view_group.php?id=6350}{Social Media Analytics in Real Time} and a biomedical \href{http://researcher.watson.ibm.com/researcher/view_group_pubs.php?grp=5727}{named entity recogniser}. These analytics aim to enhance IBM Watson in dealing with domain specific data. The deliverables have been utilised by clients from fashion, sports and insurance.}
+    \resumeItemListEnd
+  \resumeEntryEnd
+
+  \resumeEntryStart
+    \resumeEntryTSDL
+      {Melbourne University/NICTA}{Jul 2010 -- Mar 2014}
+      {PhD and Research Assistant}{Melbourne, Australia}
+    \resumeItemListStart
+      \resumeItem {I applied NLP/ML methods to improve the utility of social media for various downstream applications.}
+      \resumeItem {I was an early contributor for "\href{http://research.unimelb.edu.au/__data/assets/pdf_file/0006/1891914/IBES-2012-Annual-Report.pdf}{Early detection and mitigation of disastrous events with broadband-enabled social interaction technologies}".}
+    \resumeItemListEnd
+  \resumeEntryEnd
+
+  \resumeEntryStart
+    \resumeEntryTSDL
+      {Microsoft Research Asia}{Jan 2007 -- Aug 2007, Sep 2009 -- Jun 2010}
+      {Fulltime Research Intern}{Beijing, China}
+    \resumeItemListStart
+      \resumeItem {I co-developed an English writing assistant which has been productised as \href{https://www.bing.com/dict?FORM=Z9LH3}{Bing Search Dictionary} in China. My work includes bilingual text mining, short sentence categorisation, incremental bilingual text crawling. This product had won \href{https://www.wsj.com/articles/SB10001424052748703545604575406771145298614}{2010 Wall Street Journal Asian Innovation Award}.}
+    \resumeItemListEnd
+  \resumeEntryEnd
+
+%-------------------------------------------------- SKILLS --------------------------------------------------
+\section{\faGears}{Professional Skills}
+ \resumeEntryStart
+  \resumeEntryS{Frontend} {HTML, CSS, Javascript (JQuery, Vue and React)}
+  \resumeEntryS{Programming} {Python, R, Bash, Java, C\#, C/C++}
+  \resumeEntryS{Modelling} {Jupyter, pandas, scikit-learn, spaCy, word2vec, fasttext, Keras (TensorFlow), AllenNLP (PyTorch)}
+  \resumeEntryS{Backend} {MySQL, Postgress, Redis, Kafka, Memcached, MongoDB}
+  \resumeEntryS{Cloud} {Certified AWS architect (W1LNNXZ212QE11WZ), familiar with VPC, EC2, S3, Lambda, CloudWatch, etc.}
+  \resumeEntryS{Container/DevOps} {Docker, docker-compose, git/bitbucket, JIRA/Trello, Jenkisn/Bamboo, Ansible}
+ \resumeEntryEnd
+
+%-------------------------------------------------- SKILLS --------------------------------------------------
+\section{\faGears}{General Skills}
+ \resumeEntryStart
+  \resumeEntryS{Language} {English (professional), Mandarin (native), Japanese (learner)}
+  \resumeEntryS{Presentation} {I am actively involved in professional presentations including publishing technical articles, giving
+invited talks in universities, demonstrating showcases for industrial partners and clients.}
+  \resumeEntryS{Management} {I am capable of mapping ideas into actionable product roadmaps; I like to lead a small agile team with competent professional and communication skills to execute the plan and get it done on time.}
+ \resumeEntryEnd
+
+%-------------------------------------------------- SKILLS --------------------------------------------------
+\section{\faGears}{More Information}
+
+ \resumeEntryStart
+  \resumeEntryS{My Research}{I worked on \href{https://minerva-access.unimelb.edu.au/bitstream/handle/11343/41029/thesis.pdf?sequence=1}{Improving the Utility of Social Media with Natural Language Processing}. In particular, I studied Twitter text normalisation and geolocation prediction in depth. The details are too long, so I present my tweet length summary: \textit{U wanto undrstnd TWEETS lik dis? Make them readable like this; and if there are too many to read, select those from a region.}}
+\resumeEntryS{My Academic Achievement}{
+    \resumeItemListStart
+      \resumeItem {I published a few top-tier conference and journal papers (e.g. ACL, EMNLP, COLING and JAIR). My H10-index is 15 and the most cited paper is over 500 (by 2020). See \href{https://scholar.google.com/citations?hl=en&user=ZRr4vn8AAAAJ}{Google Scholar} for a full list of publications.}
+      \resumeItem {I had co-organised two workshops on social media analytics (\href{https://noisy-text.github.io/2015/}{W-NUT 2015} and \href{https://noisy-text.github.io/2015/}{W-NUT 2016}).}
+      \resumeItem {I had one issued patent (US9569551B2) in United States.}
+      \resumeItem {I had one software copyright (2015SR225534) in China.}
+    \resumeItemListEnd}
+
+  \resumeEntryS{My Project} {I like coding some side projects for fun. They are like Unix utilities dedicated to solve a particular information need. The most recent one is \href{http://panda-lens.com/}{panda-lens.com}. It is a pure data-driven real-time information consumption platform.}
+  \resumeEntryS{My Hobby} {Cook gourmet food daily; Play badminton weekly; Travel 3 times a year; Had one detective novel (written in Mandarin)}
+ \resumeEntryEnd
+
+
+\end{document}
