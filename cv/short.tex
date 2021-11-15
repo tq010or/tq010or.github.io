@@ -47,6 +47,7 @@
 \def \entryspacing {-0pt}
 
 \def \bulletstyle {\faAngleRight}
+\def \plainstyle {}
 
 % Define colours
 \definecolor{primary}{HTML}{000000}
@@ -56,7 +57,7 @@
 
 %------------------------------------------------------------------------------------------------------------------- 
 
-% Defines to make listing easier
+%Defines to make listing easier
 \def \linkedin {\linkedinicon \hspace{3pt}\href{\linkedinlink}{\linkedintext}}
 \def \phone {\phoneicon \hspace{3pt}{ \phonetext}}
 \def \email {\emailicon \hspace{3pt}\href{\emaillink}{\emailtext}}
@@ -105,6 +106,7 @@
   }
 }
 
+
 % Entry with title, subheading, date(s), and location
 \newcommand{\resumeEntryTSDL}[4]{
   \vspace{-1pt}\item[]
@@ -126,6 +128,13 @@
 \newcommand{\resumeEntryS}[2]{
   \item[]\small{
     \textbf{\color{primary}#1 }{ #2 \vspace{-6pt}}
+  }
+}
+
+% item description
+\newcommand{\resumeTool}[1]{
+  \small{
+    \textit{Tools: #1 \vspace{-6pt}}
   }
 }
 
@@ -176,26 +185,18 @@
 \headertype{\linkedin}{\github}{\website}{\phone}{\email}{} % Set the order of items here
 \vspace{-10pt} % Set a negative value to push the body up, and the opposite
 
-%-------------------------------------------------- Statement --------------------------------------------------
-\section{\faFlask}{Personal Statement}
-
-    \resumeItemListStart
-      \resumeItem {I am a problem solver and capability enabler with R\&D and consulting experience in media, telco, health and financial services. My analytical mindset, agile prototyping skills, team leadership, product and programme delivery experience enable me to develop impact-oriented solutions for business value creations.}
-    \resumeItemListEnd
 
 %-------------------------------------------------- EXPERIENCE --------------------------------------------------
 \section{\faPieChart}{Work Experience}
-
   \resumeEntryStart
     \resumeEntryTSDL
       {Accenture}{Sep 2018 -- Present}
-      {Delivery Lead/Tech Arch Delivery Manager}{Sydney, Australia}
+      {Tech Arch Delivery Manager}{Sydney, Australia}
     \resumeItemListStart
-      \resumeItem {Led the new platform design and data migration for a client's business critical legacy system}
-      \resumeItem {Oversaw tech architecture design and implementation for a client's 5G roll-out}
-      \resumeItem {Set up and improved process, culture and capability for a diverse team as a delivery lead}
-      \resumeItem {Coordinated business units and tech teams to unblock barriers and ensure shared goals}
-      \resumeItem {Brought next best actions and improvement plans for managements in quarterly roadmap plannings.}
+      \resumeItem {Improved critical business service response time, availability and stability by transforming complex legacy IT assets into a RESTful container orchestration design.}
+      \resumeItem {Oversaw the design and implementation for a client's 5G infrastructure management which enables agile and reliable change managements and reduces operational costs.}
+      \resumeItem {Coordinated business units and tech teams to unblock barriers and ensure shared goals are on the track.}
+      \resumeItem {Set up process, culture and capability for a multi-vendor diverse team from scratch.}
     \resumeItemListEnd
   \resumeEntryEnd
 
@@ -207,7 +208,7 @@
       \resumeItem {Optimised a text-based financial compliance system with more than 100x speed up.} 
       \resumeItem{Drove a serverless design in cloud which significantly boosted the system throughput and scalability.}
       \resumeItem {Applied active learning and other pragmatic methods to improve compliance system accuracy.}
-      \resumeItem {Co-developed an in-house data anonymisation system for personal and identifiable information.}
+      \resumeItem {Co-developed an in-house data anonymisation asset for personal and identifiable information.}
     \resumeItemListEnd
   \resumeEntryEnd
 
@@ -235,6 +236,7 @@
       {PhD and Research Assistant}{Melbourne, Australia}
     \resumeItemListStart
       \resumeItem {Applied NLP/ML methods to improve the utility of social media for various analytics, including "\href{http://research.unimelb.edu.au/__data/assets/pdf_file/0006/1891914/IBES-2012-Annual-Report.pdf}{Early detection and mitigation of disastrous events with broadband-enabled social interaction technologies}".}
+      \resumeItem {My research focuses on \href{https://minerva-access.unimelb.edu.au/bitstream/handle/11343/41029/thesis.pdf?sequence=1}{Improving the Utility of Social Media with Natural Language Processing}. A tweet length summary of this work is \textit{U wanto undrstnd TWEETS lik dis? Make them readable like this; and if there are too many to read, select those from a region.}}
     \resumeItemListEnd
   \resumeEntryEnd
 
@@ -247,62 +249,59 @@
     \resumeItemListEnd
   \resumeEntryEnd
 
-%-------------------------------------------------- SKILLS --------------------------------------------------
-\section{\faGears}{Professional Skills}
- \resumeEntryStart
-  \resumeEntryS{Cloud} {(a) best practise for multi-tier scalable and reliable solutions; (b) design for high availability and disaster recovery; (c) serverless/containerisation architecture; (d) complex programme delivery; (e) data migration and integration; (f) enterprise hybrid solutions}
-  \resumeEntryS{Frontend} {HTML, CSS, Javascript (JQuery, Vue and React)}
-  \resumeEntryS{Programming} {Python, R, Bash, Java, C\#, C/C++}
-  \resumeEntryS{Modelling} {Jupyter, pandas, scikit-learn, spaCy, word2vec, PyTorch, transformers, AWS SageMaker}
-  \resumeEntryS{Backend} {MySQL, Postgres, Redis/Memcached, Kafka, MongoDB}
-  \resumeEntryS{Container/DevOps} {Docker, Kubernetes/OpenShift, git/bitbucket, JIRA/Trello, Jenkisn/Bamboo}
- \resumeEntryEnd
-
-%-------------------------------------------------- SKILLS --------------------------------------------------
-\section{\faGears}{General Skills}
-
- \resumeEntryStart
-  \resumeEntryS{Management, Leadership and Communications}{
-   \resumeItemListStart
-      \resumeItem {Identify high-value opportunities from business context, and map ideas into products and services}
-      \resumeItem {Deliver objectives and impact-oriented solutions with best practise}
-      \resumeItem {Enable data analytics capability from scratch for a practise}
-      \resumeItem {Manage stakeholder expectations and come up with plans for next best moves}
-      \resumeItem {Coordinate across business functions and work as a team}
-      \resumeItem {Present to diverse audiences, e.g., invited talks in universities, showcases for partners and clients}
-    \resumeItemListEnd}
-  \resumeEntryS{Language} {English (professional), Mandarin (native), Japanese (learner)}
- \resumeEntryEnd
-
 %-------------------------------------------------- EDUCATION --------------------------------------------------
 \section{\faGraduationCap}{Education}
 
   \resumeEntryStart
     \resumeEntryTSDL
       {Melbourne University}{2010 -- 2014}
-      {PhD in Computer Science (Natural Language Processing)}{Melbourne, Australia}
+      {PhD in Computer Science (Natural Language Processing/Machine Learning)}{Melbourne, Australia}
     \resumeEntryTSDL
       {Dalian University of Technology}{2003 -- 2009}
       {Bachelor and Master in Software Engineering}{Dalian, China}
   \resumeEntryEnd
 
-%-------------------------------------------------- Extra --------------------------------------------------
-\section{\faGears}{Extra Information}
 
+%-------------------------------------------------- SKILLS --------------------------------------------------
+\section{\faGears}{Professional Skills}
  \resumeEntryStart
-  \resumeEntryS{My research}{focuses on \href{https://minerva-access.unimelb.edu.au/bitstream/handle/11343/41029/thesis.pdf?sequence=1}{Improving the Utility of Social Media with Natural Language Processing}. In particular, I studied Twitter text normalisation and geolocation prediction in depth. A tweet length summary of this work is \textit{U wanto undrstnd TWEETS lik dis? Make them readable like this; and if there are too many to read, select those from a region.}}
-\resumeEntryS{Professional achievements}{
+  \resumeEntryS{Certifications:} {\href{https://www.youracclaim.com/badges/c7ac42bd-fe9a-4f13-83b3-80cea3a8cc57/public_url}{AWS Solution Architect Associate} and \href{https://www.youracclaim.com/badges/f7d5a6a9-caaf-472c-b703-207ae1046147/public_url}{Professional}}
+  \resumeEntryS{Frontend:} {HTML, CSS, Javascript, JQuery, React}
+  \resumeEntryS{Programming:} {Python, R, Bash, Java, C\#, C/C++}
+  \resumeEntryS{Modelling:} {Jupyter, pandas, scikit-learn, spaCy, PyTorch/TorchServe, Flask/gunicorn/Nginx, transformers}
+  \resumeEntryS{Backend:} {Postgres, MySQL, Redis/Memcached}
+  \resumeEntryS{Container:} {Docker, Kubernetes/OpenShift, AWS ECS}
+  \resumeEntryS{DevOps:} {git/bitbucket, JIRA/Trello, Jenkins/Bamboo}
+
+\resumeEntryS{Cloud:}{
     \resumeItemListStart
-      \resumeItem {Certified \href{https://www.youracclaim.com/badges/c7ac42bd-fe9a-4f13-83b3-80cea3a8cc57/public_url}{AWS Solution Architect Associate} and \href{https://www.youracclaim.com/badges/f7d5a6a9-caaf-472c-b703-207ae1046147/public_url}{Professional}}
-      \resumeItem {Published a few top-tier conference and journal papers (e.g. ACL, EMNLP, COLING and JAIR). My H10-index is 15 and the most cited paper is over 500 (by 2020). See \href{https://scholar.google.com/citations?hl=en&user=ZRr4vn8AAAAJ}{Google Scholar} for a full list of publications.}
-      \resumeItem {Co-organised two international workshops on social media analytics (\href{https://noisy-text.github.io/2015/}{W-NUT 2015} and \href{https://noisy-text.github.io/2015/}{W-NUT 2016}).}
-      \resumeItem {Held two issued patents in the United States (US9569551B2, US9697245B1).}
-      \resumeItem {Held one software copyright in China (2015SR225534).}
+      \resumeItem {Best practise for multi-tier scalable and reliable solutions (e.g. ALB, EC2/ECS, VPC)}
+      \resumeItem {Design for high availability and disaster recovery (e.g. backup and recovery RTO/RPO)}
+      \resumeItem {Serverless and containerisation architecture (e.g. Lambda, API gateway)}
+      \resumeItem {Data migration and integration (e.g. AMS and DMS)}
+      \resumeItem {Enterprise journey to cloud and hybrid solutions (e.g. AWS storage gateway, Route 53)}
     \resumeItemListEnd}
 
-  \resumeEntryS{Projects} {I like coding side projects for fun. They are like Unix utilities dedicated to solve a particular pain point. The most recent one is \href{https://panda-lens.com/}{panda-lens.com}. It is a pure data-driven real-time trend analysis platform.}
-  \resumeEntryS{Hobbies} {Cook gourmet food daily; Play badminton weekly; Travel 3 times a year; Had one detective novel (written in Mandarin)}
- \resumeEntryEnd
 
+\resumeEntryS{Consulting:}{
+    \resumeItemListStart
+      \resumeItem {Identify high-value opportunities from business context, and map ideas into products and services}
+      \resumeItem {Deliver objectives and impact-oriented solutions with best practise}
+      \resumeItem {Enable data analytics capability from scratch to build a practise}
+      \resumeItem {Manage stakeholder expectations and come up with plans for next best moves}
+      \resumeItem {Coordinate across business functions and work as a team}
+      \resumeItem {Present to diverse audiences, e.g. invited talks in universities, showcases for partners and clients}
+    \resumeItemListEnd}
+
+\resumeEntryS{Achievements:}{
+    \resumeItemListStart
+     \resumeItem {Published a few top-tier conference and journal papers (e.g. ACL, EMNLP, COLING and JAIR). My H10-index is 15 and the most cited paper is over 500 (by 2020). See \href{https://scholar.google.com/citations?hl=en&user=ZRr4vn8AAAAJ}{Google Scholar} for a full list of publications.}
+     \resumeItem {Co-organised two international workshops on social media analytics (\href{https://noisy-text.github.io/2015/}{W-NUT 2015} and \href{https://noisy-text.github.io/2015/}{W-NUT 2016}).}
+     \resumeItem {Held two issued patents in the United States (US9569551B2, US9697245B1).}
+     \resumeItem {Held one software copyright in China (2015SR225534).}
+     \resumeItem {Creator and maintainer for \href{https://panda-lens.com/}{panda-lens.com}: a pure data-driven real-time trend analysis platform.}
+    \resumeItemListEnd}
+
+ \resumeEntryEnd
 
 \end{document}
