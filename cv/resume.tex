@@ -105,6 +105,13 @@
   }
 }
 
+% Resume text
+\newcommand{\resumeText}[1]{
+  \small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
 % Entry with title, subheading, date(s), and location
 \newcommand{\resumeEntryTSDL}[4]{
   \vspace{-1pt}\item[]
@@ -179,35 +186,44 @@
 %-------------------------------------------------- Statement --------------------------------------------------
 \section{\faFlask}{Personal Statement}
 
-    \resumeItemListStart
-      \resumeItem {I am a problem solver and capability enabler with R\&D and consulting experience in media, telco, health and financial services. My analytical mindset, agile prototyping skills, team leadership, product and programme delivery experience enable me to develop impact-oriented solutions for business value creations.}
-    \resumeItemListEnd
+    \resumeText{I am a problem solver and capability enabler with R\&D and consulting experience in media, telco, retail, health and financial services. My analytical mindset, agile prototyping skills, team leadership, product and programme delivery experience enable me to develop impact-oriented solutions for business value creations.}
 
 %-------------------------------------------------- EXPERIENCE --------------------------------------------------
 \section{\faPieChart}{Work Experience}
+  \resumeEntryStart
+    \resumeEntryTSDL
+      {Endeavour Group}{Apr 2022 -- Present}
+      {Data Science Chapter Lead}{Sydney, Australia}
+    \resumeItemListStart
+      \resumeItem {Set goals, priorities and roadmaps for the data science team and provide support for tribe agile delivery}
+      \resumeItem {Drive and execute initiatives that empower data-driven business and optimisation, e.g. build a generic forecast engine and tailor it for different departments from logistics, merchandise to store rostering}
+      \resumeItem {Enable team to build data science portfolios for efficient and effective MLOps, e.g. Feature Store, Machine Learning CookieCutter}
+    \resumeItemListEnd
+  \resumeEntryEnd
+
 
   \resumeEntryStart
     \resumeEntryTSDL
-      {Accenture}{Sep 2018 -- Present}
+      {Accenture}{Sep 2018 -- Mar 2022}
       {Delivery Lead/Tech Arch Delivery Manager}{Sydney, Australia}
     \resumeItemListStart
       \resumeItem {Led the new platform design and data migration for a client's business critical legacy system}
       \resumeItem {Oversaw tech architecture design and implementation for a client's 5G roll-out}
       \resumeItem {Set up and improved process, culture and capability for a diverse team as a delivery lead}
       \resumeItem {Coordinated business units and tech teams to unblock barriers and ensure shared goals}
-      \resumeItem {Brought next best actions and improvement plans for managements in quarterly roadmap plannings.}
+      \resumeItem {Brought next best actions and improvement plans for managements in quarterly roadmap plannings}
     \resumeItemListEnd
   \resumeEntryEnd
 
   \resumeEntryStart
     \resumeEntryTSDL
       {Kaplan}{May 2017 -- Aug 2018}
-      {NLP Specialist}{Sydney, Australia}
+      {Senior Data Scientist/NLP Specialist}{Sydney, Australia}
     \resumeItemListStart
-      \resumeItem {Optimised a text-based financial compliance system with more than 100x speed up.} 
-      \resumeItem{Drove a serverless design in cloud which significantly boosted the system throughput and scalability.}
-      \resumeItem {Applied active learning and other pragmatic methods to improve compliance system accuracy.}
-      \resumeItem {Co-developed an in-house data anonymisation system for personal and identifiable information.}
+      \resumeItem {Optimised a text-based financial compliance system with more than 100x speed up} 
+      \resumeItem{Drove a serverless design in cloud which significantly boosted the system throughput and scalability}
+      \resumeItem {Applied active learning and other pragmatic methods to improve compliance system accuracy}
+      \resumeItem {Co-developed an in-house data anonymisation system for personal and identifiable information}
     \resumeItemListEnd
   \resumeEntryEnd
 
@@ -216,7 +232,7 @@
       {Hugo AI (Sydney Startup)}{Mar 2016 -- Mar 2017}
       {Data Scientist}{Sydney, Australia}
     \resumeItemListStart
-        \resumeItem {Designed and implemented an automatic user profile summarisation system. The work features data crawling, cleaning, reconciliation and natural language generation from various social media sources. The deliverables facilitate online recruiters for more effective and efficient talent acquisitions.}
+        \resumeItem {Designed and implemented an automatic user profile summarisation system. The work features data crawling, cleaning, reconciliation and natural language generation from various social media sources. The deliverables facilitate online recruiters for more effective and efficient talent acquisitions}
     \resumeItemListEnd
   \resumeEntryEnd
 
@@ -225,7 +241,7 @@
       {IBM Research}{Apr 2014 -- Mar 2016}
       {Research Scientist}{Melbourne, Australia}
     \resumeItemListStart
-      \resumeItem {Led the design and implementation for a number of social media analytics with ML and NLP, including (a) a text-based \href{http://researcher.watson.ibm.com/researcher/view_group.php?id=6349}{geotagger}, (b) \href{http://researcher.watson.ibm.com/researcher/view_group.php?id=6350}{Social Media Analytics in Real Time} and (c) a biomedical \href{http://researcher.watson.ibm.com/researcher/view_group_pubs.php?grp=5727}{named entity recogniser}. The deliverables have been utilised by clients from fashion, sports and insurance.}
+      \resumeItem {Led the design and implementation for a number of social media analytics with ML and NLP, including (a) a text-based \href{http://researcher.watson.ibm.com/researcher/view_group.php?id=6349}{geotagger}, (b) \href{http://researcher.watson.ibm.com/researcher/view_group.php?id=6350}{Social Media Analytics in Real Time} and (c) a biomedical \href{http://researcher.watson.ibm.com/researcher/view_group_pubs.php?grp=5727}{named entity recogniser}. The deliverables have been utilised by clients from fashion, sports and insurance}
     \resumeItemListEnd
   \resumeEntryEnd
 
@@ -234,7 +250,7 @@
       {Melbourne University/NICTA}{Jul 2010 -- Mar 2014}
       {PhD and Research Assistant}{Melbourne, Australia}
     \resumeItemListStart
-      \resumeItem {Applied NLP/ML methods to improve the utility of social media for various analytics, including "\href{http://research.unimelb.edu.au/__data/assets/pdf_file/0006/1891914/IBES-2012-Annual-Report.pdf}{Early detection and mitigation of disastrous events with broadband-enabled social interaction technologies}".}
+      \resumeItem {Applied NLP/ML methods to improve the utility of social media for various analytics, including "\href{http://research.unimelb.edu.au/__data/assets/pdf_file/0006/1891914/IBES-2012-Annual-Report.pdf}{Early detection and mitigation of disastrous events with broadband-enabled social interaction technologies}"}
     \resumeItemListEnd
   \resumeEntryEnd
 
@@ -243,7 +259,7 @@
       {Microsoft Research Asia}{Jan 2007 -- Aug 2007, Sep 2009 -- Jun 2010}
       {Fulltime Research Intern}{Beijing, China}
     \resumeItemListStart
-      \resumeItem {Co-developed an English writing assistant which has been productised as \href{https://www.bing.com/dict?FORM=Z9LH3}{Bing Search Dictionary} in China. My work includes bilingual text mining, short sentence categorisation, incremental bilingual text crawling. This product had won \href{https://www.wsj.com/articles/SB10001424052748703545604575406771145298614}{2010 Wall Street Journal Asian Innovation Award}.}
+      \resumeItem {Co-developed an English writing assistant which has been productised as \href{https://www.bing.com/dict?FORM=Z9LH3}{Bing Search Dictionary} in China. My work includes bilingual text mining, short sentence categorisation, incremental bilingual text crawling. This product had won \href{https://www.wsj.com/articles/SB10001424052748703545604575406771145298614}{2010 Wall Street Journal Asian Innovation Award}}
     \resumeItemListEnd
   \resumeEntryEnd
 
@@ -253,9 +269,9 @@
   \resumeEntryS{Cloud} {(a) best practise for multi-tier scalable and reliable solutions; (b) design for high availability and disaster recovery; (c) serverless/containerisation architecture; (d) complex programme delivery; (e) data migration and integration; (f) enterprise hybrid solutions}
   \resumeEntryS{Frontend} {HTML, CSS, Javascript (JQuery, Vue and React)}
   \resumeEntryS{Programming} {Python, R, Bash, Java, C\#, C/C++}
-  \resumeEntryS{Modelling} {Jupyter, pandas, scikit-learn, spaCy, word2vec, PyTorch, transformers, AWS SageMaker}
+  \resumeEntryS{Modelling} {Jupyter, pandas, scikit-learn, spaCy, word2vec, PyTorch, transformers, AWS SageMaker, GCP Vertex AI}
   \resumeEntryS{Backend} {MySQL, Postgres, Redis/Memcached, Kafka, MongoDB}
-  \resumeEntryS{Container/DevOps} {Docker, Kubernetes/OpenShift, git/bitbucket, JIRA/Trello, Jenkisn/Bamboo}
+  \resumeEntryS{Container/DevOps} {Docker, Kubernetes/OpenShift, git/bitbucket, JIRA/Trello, Jenkins/Bamboo}
  \resumeEntryEnd
 
 %-------------------------------------------------- SKILLS --------------------------------------------------
@@ -300,8 +316,8 @@
       \resumeItem {Held one software copyright in China (2015SR225534).}
     \resumeItemListEnd}
 
-  \resumeEntryS{Projects} {I like coding side projects for fun. They are like Unix utilities dedicated to solve a particular pain point. The most recent one is \href{https://panda-lens.com/}{panda-lens.com}. It is a pure data-driven real-time trend analysis platform.}
-  \resumeEntryS{Hobbies} {Cook gourmet food daily; Play badminton weekly; Travel 3 times a year; Had one detective novel (written in Mandarin)}
+  %\resumeEntryS{Projects} {I like coding side projects for fun. They are like Unix utilities dedicated to solve a particular pain point. The most recent one is \href{https://panda-lens.com/}{panda-lens.com}. It is a pure data-driven real-time trend analysis platform.}
+  %\resumeEntryS{Hobbies} {Cook gourmet food daily; Play badminton weekly; Travel 3 times a year; Had one detective novel (written in Mandarin)}
  \resumeEntryEnd
 
 
